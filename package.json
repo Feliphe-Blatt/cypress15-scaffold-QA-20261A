@@ -1,0 +1,24 @@
+{
+  "name": "cypress15-scaffold-qa-20261a",
+  "version": "1.0.0",
+  "description": "Projeto para faculdade na disciplina de Quality assurance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A/issues"
+  },
+  "homepage": "https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A#readme",
+  "devDependencies": {
+    "cypress": "^15.14.1"
+  }
+}
