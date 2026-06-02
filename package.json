@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A#readme",
   "devDependencies": {
-    "cypress": "^15.14.1"
+    "@cucumber/cucumber": "^12.9.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^15.14.1",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }

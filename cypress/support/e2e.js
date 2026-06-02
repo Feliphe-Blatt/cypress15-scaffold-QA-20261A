@@ -15,3 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+// importar steps das features para que o preprocessor os registre
+// steps agora são carregados automaticamente a partir de
+// `cypress/support/step_definitions` pelo preprocessor.
