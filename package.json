@@ -1,17 +1,26 @@
 {
   "name": "cypress15-scaffold-qa-20261a",
   "version": "1.0.0",
-  "description": "Projeto para faculdade na disciplina de Quality assurance",
+  "description": "Projeto VA02 de QA: testes BDD (Cypress + Cucumber/Gherkin) no Portal da Câmara dos Deputados",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "gherkin",
+    "bdd",
+    "qa",
+    "e2e"
+  ],
+  "author": "Feliphe Blatt",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
@@ -19,9 +28,15 @@
   },
   "homepage": "https://github.com/Feliphe-Blatt/cypress15-scaffold-QA-20261A#readme",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "@cucumber/cucumber": "^12.9.0",
-    "@cypress/browserify-preprocessor": "^3.0.2",
     "cypress": "^15.14.1",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "esbuild": "^0.28.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/e2e/steps/**/*.{js,ts}"
+    ]
   }
 }

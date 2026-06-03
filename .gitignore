@@ -142,5 +142,10 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 
+# Cypress — artefatos de execução
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
 # Ignorar arquivo local de instruções do projeto
 qa_project_instructions.md

@@ -1,16 +1,29 @@
 const { defineConfig } = require("cypress");
-const browserify = require('@cypress/browserify-preprocessor');
-const cucumber = require('cypress-cucumber-preprocessor').default;
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const {
+  addCucumberPreprocessorPlugin,
+} = require("@badeball/cypress-cucumber-preprocessor");
+const {
+  createEsbuildPlugin,
+} = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
-  allowCypressEnv: true,
-
   e2e: {
-    specPattern: 'cypress/e2e/features/**/*.feature',
-    setupNodeEvents(on, config) {
-      const options = browserify.defaultOptions;
-      // register the cucumber preprocessor
-      on('file:preprocessor', cucumber(options));
+    baseUrl: "https://www.camara.leg.br",
+    specPattern: "cypress/e2e/features/**/*.feature",
+    // Site externo de terceiros: relaxa a política de same-origin do Cypress.
+    chromeWebSecurity: false,
+    // Portal público pode ter latência; dá folga aos comandos.
+    defaultCommandTimeout: 10000,
+    pageLoadTimeout: 60000,
+    async setupNodeEvents(on, config) {
+      await addCucumberPreprocessorPlugin(on, config);
+      on(
+        "file:preprocessor",
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        })
+      );
       return config;
     },
   },
