@@ -1,0 +1,13 @@
+{
+  "busca": {
+    "termoValido": "educação",
+    "termoSemResultado": "zxqwk123naoexiste",
+    "termoResultado": "orçamento",
+    "termoPreservado": "meio ambiente",
+    "temas": ["saúde", "educação", "economia"]
+  },
+  "deputados": {
+    "nome": "Silva",
+    "ufs": ["SP", "RJ"]
+  }
+}

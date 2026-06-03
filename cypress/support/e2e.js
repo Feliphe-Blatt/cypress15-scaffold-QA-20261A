@@ -1,21 +1,15 @@
 // ***********************************************************
-// This example support/e2e.js is processed and
-// loaded automatically before your test files.
-//
-// This is a great place to put global configuration and
-// behavior that modifies Cypress.
-//
-// You can change the location of this file or turn off
-// automatically serving support files with the
-// 'supportFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/configuration
+// Carregado automaticamente antes de cada arquivo de teste (spec).
+// Bom lugar para configuração e comportamento globais.
+// Doc: https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
-// importar steps das features para que o preprocessor os registre
-// steps agora são carregados automaticamente a partir de
-// `cypress/support/step_definitions` pelo preprocessor.
+// O Portal da Câmara é um site público de terceiros e pode lançar exceções de
+// JavaScript (scripts de analytics/terceiros, etc.) que não têm relação com os
+// nossos testes. Por padrão o Cypress falharia o teste nesse caso — e no Windows
+// isso ainda dispara o bug do "toPosix" (cypress-io/cypress#26142).
+// Ignoramos essas exceções da aplicação para os cenários não quebrarem por algo
+// fora do nosso escopo de teste.
+Cypress.on("uncaught:exception", () => false);
