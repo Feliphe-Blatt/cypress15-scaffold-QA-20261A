@@ -9,7 +9,7 @@ Projeto da disciplina de **Quality Assurance (P5)**. Automação de testes E2E c
 - **Alvo:** Câmara dos Deputados (consulta de dados parlamentares)
 - **Stack:** Node.js · Cypress 15 · `@badeball/cypress-cucumber-preprocessor` · esbuild
 
-> 🎥 **Vídeo de apresentação:** _(adicionar o link do YouTube aqui após a gravação)_
+> 🎥 **Vídeo de apresentação:** [▶️ Assistir no YouTube](https://youtu.be/YpoWPq3t0m0) · arquivo no repositório: [`docs/video/apresentacao.mp4`](docs/video/apresentacao.mp4)
 
 ---
 
